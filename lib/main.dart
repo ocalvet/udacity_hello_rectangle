@@ -23,6 +23,10 @@ class HelloRectangle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Center(
+        child: GestureDetector(
+      onTap: () {
+        print('Changing color');
+      },
       child: Container(
         color: Colors.greenAccent,
         height: 400.0,
@@ -35,6 +39,6 @@ class HelloRectangle extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 }
