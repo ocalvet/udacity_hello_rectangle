@@ -1,6 +1,4 @@
-// Copyright 2018 The Chromium Authors. All rights reserved.
-// Use of this source code is governed by a BSD-style license that can be
-// found in the LICENSE file.
+import 'dart:math';
 
 import 'package:flutter/material.dart';
 
@@ -20,6 +18,10 @@ void main() {
 }
 
 class HelloRectangle extends StatelessWidget {
+  Color getRandomColor() {
+    Random random = new Random();
+    return Color.fromARGB(random.nextInt(255), random.nextInt(255), random.nextInt(255), random.nextInt(255));
+  }
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -28,7 +30,7 @@ class HelloRectangle extends StatelessWidget {
         print('Changing color');
       },
       child: Container(
-        color: Colors.greenAccent,
+        color: getRandomColor(),
         height: 400.0,
         width: 300.0,
         child: Center(
