@@ -18,15 +18,24 @@ void main() {
 }
 
 class HelloRectangle extends StatefulWidget {
+  @override
   HelloRectangleState createState() => HelloRectangleState();
 }
 
 class HelloRectangleState extends State<HelloRectangle> {
   Random random = new Random();
   Color selectedColor;
+  @override
+  initState() {
+    super.initState();
+    this.selectedColor = getRandomColor();
+  }
   Color getRandomColor() {
-    return Color.fromARGB(random.nextInt(255), random.nextInt(255),
-        random.nextInt(255), random.nextInt(255));
+    return Color.fromARGB(200, 
+      random.nextInt(255),
+      random.nextInt(255),
+      random.nextInt(255),
+    );
   }
 
   @override
