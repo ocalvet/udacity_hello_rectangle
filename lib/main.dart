@@ -38,6 +38,10 @@ class HelloRectangleState extends State<HelloRectangle> {
     );
   }
 
+  String getQuote() {
+    return "";
+  }
+
   @override
   Widget build(BuildContext context) {
     return Center(
