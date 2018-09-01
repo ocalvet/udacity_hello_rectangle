@@ -41,8 +41,8 @@ class SimpleButtonState extends State<SimpleButton> {
       },
       child: Container(
         color: selectedColor,
-        height: 300.0,
-        width: 300.0,
+        height: 80.0,
+        width: MediaQuery.of(context).size.width,
         child: Center(
           child: Text(
             'Hello There!',
