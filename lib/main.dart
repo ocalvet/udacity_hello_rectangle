@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/material.dart';
 import './simple_button.dart';
 
@@ -11,7 +10,11 @@ void main() {
         appBar: AppBar(
           title: Text('Hello Rectangle'),
         ),
-        body: SimpleButton(),
+        body: Column(
+          children: [
+            SimpleButton(),
+            SimpleButton(),
+          ])
       ),
     ),
   );
