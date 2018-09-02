@@ -3,6 +3,10 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 
 class SimpleButton extends StatefulWidget {
+  final onClickHandler;
+
+  SimpleButton({this.onClickHandler});
+
   @override
   SimpleButtonState createState() => SimpleButtonState();
 }
@@ -25,19 +29,16 @@ class SimpleButtonState extends State<SimpleButton> {
     );
   }
 
-  String getQuote() {
-    return "";
-  }
-
   @override
   Widget build(BuildContext context) {
     return Center(
-        child: GestureDetector(
+      child: GestureDetector(
       onTap: () {
         print('Changing color');
         setState(() {
           selectedColor = getRandomColor();
         });
+        widget.onClickHandler("Hello there");
       },
       child: Container(
         color: selectedColor,
